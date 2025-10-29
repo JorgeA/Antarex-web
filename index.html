@@ -5,240 +5,170 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ANTAREX | Soluciones seguras para un mundo conectado.</title>
   <meta name="description" content="Servicios profesionales de cableado estructurado, redes inalámbricas, cámaras de seguridad, cercas eléctricas, domótica y configuración de equipos en Costa Rica." />
-  <meta name="keywords" content="cableado estructurado, redes inalámbricas, Wi‑Fi 6, cámaras, CCTV, domótica, cercas eléctricas, soporte de redes, Costa Rica, ANTAREX" />
+  <meta name="keywords" content="cableado estructurado, redes inalámbricas, Wi-Fi 6, cámaras, CCTV, domótica, cercas eléctricas, soporte de redes, Costa Rica, ANTAREX" />
   <meta name="theme-color" content="#ffffff" />
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="ANTAREX | Soluciones seguras para un mundo conectado."/>
-  <meta property="og:description" content="Cableado, Wi‑Fi 6, cámaras, domótica y seguridad para hogares y negocios en Costa Rica."/>
-  <meta property="og:image" content="logo.png"/>
-  <meta property="og:type" content="website"/>
-
   <link rel="icon" type="image/png" href="logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      /* Paleta clara + acento dorado */
-      --bg:#f6f8fb;           /* fondo general */
-      --paper:#ffffff;        /* tarjetas y paneles */
-      --muted:#5b6676;        /* texto secundario */
-      --ink:#0f172a;          /* texto principal */
+      --bg:#f6f8fb;
+      --paper:#ffffff;
+      --muted:#5b6676;
+      --ink:#0f172a;
       --border:1px solid rgba(15,23,42,.08);
-      --accent:#caa64a;       /* dorado principal */
-      --accent-strong:#a88934;/* dorado más fuerte */
+      --accent:#caa64a;
+      --accent-strong:#a88934;
       --maxw:1140px;
       --radius:18px;
       --shadow:0 10px 30px rgba(15,23,42,.06);
     }
-
     *{box-sizing:border-box}
-    html,body{margin:0;height:100%;scroll-behavior:smooth}
-    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:
-      radial-gradient(1200px 600px at 20% -10%, rgba(202,166,74,.10), transparent 35%),
-      var(--bg);color:var(--ink)}
-    a{color:inherit;text-decoration:none}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    a{text-decoration:none;color:inherit}
     img{max-width:100%;height:auto}
-    .container{max-width:var(--maxw);margin-inline:auto;padding:0 20px}
-
-    /* NAV */
-    .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(140%) blur(12px);border-bottom:var(--border)}
-    .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800}
+    .container{max-width:var(--maxw);margin:auto;padding:0 20px}
+    .nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:var(--border);backdrop-filter:saturate(140%) blur(12px)}
+    .nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
     .brand img{height:36px;width:auto}
-    .menu{display:flex;gap:16px}
+    .menu{display:flex;gap:14px}
     .menu a{padding:10px 12px;border-radius:10px;color:#334155;font-weight:500}
     .menu a:hover{background:rgba(202,166,74,.12)}
-
-    /* HERO */
-    header.hero{padding:74px 0 36px}
+    header.hero{padding:72px 0 36px}
     .hero-inner{display:grid;gap:24px;grid-template-columns:1.2fr .8fr;align-items:center}
     .logo-wrap{display:flex;justify-content:center}
     .logo-wrap img{width:min(260px,60vw);filter:drop-shadow(0 10px 25px rgba(202,166,74,.35))}
-    .kicker{font-size:.85rem;letter-spacing:.08em;color:#475569;text-transform:uppercase;font-weight:700}
+    .kicker{font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:#475569;font-weight:700}
     h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.06;margin:10px 0;background:linear-gradient(90deg,var(--accent-strong),#000);-webkit-background-clip:text;background-clip:text;color:transparent}
     .lead{color:#475569;font-size:1.08rem}
     .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;border:var(--border);background:var(--paper);box-shadow:var(--shadow);font-weight:700}
-    .btn:hover{transform:translateY(-1px)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:14px;border:var(--border);background:var(--paper);box-shadow:var(--shadow);font-weight:700}
     .btn.primary{background:linear-gradient(180deg,rgba(202,166,74,.18),rgba(202,166,74,.08));border:1px solid rgba(202,166,74,.45)}
-
-    /* SECTIONS */
     section{padding:64px 0}
     .title{font-size:1.9rem;margin:0 0 12px}
-    .sub{color:#556070;margin:0 0 18px}
-
-    /* SERVICES */
+    .sub{color:#556070;margin-bottom:20px}
     .grid{display:grid;gap:18px}
     @media(min-width:760px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
-    .card{background:var(--paper);border:var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}
-    .card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(15,23,42,.10);border-color:rgba(202,166,74,.45)}
+    .card{background:var(--paper);border:var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(15,23,42,.1)}
     .card h3{margin:6px 0 8px}
-    .icon{width:30px;height:30px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(202,166,74,.25),rgba(202,166,74,.08));border:1px solid rgba(202,166,74,.4)}
-    .icon svg{width:16px;height:16px}
-
-    /* WHY US */
     .why{background:#fbfcfe;border-top:var(--border);border-bottom:var(--border)}
     .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(202,166,74,.1);border:1px solid rgba(202,166,74,.35);font-weight:600;color:#6b4f16}
-
-    /* CTA STRIP */
-    .cta-strip{background:linear-gradient(90deg,var(--accent),#e8d08a);color:#1a1a1a}
-    .cta-strip .wrap{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:26px 0}
-    .cta-strip .btn{background:#1a1a1a;color:#fff;border-color:#000}
-    .cta-strip .btn:hover{background:#111}
-
-    /* CONTACT */
-    .contact-list{display:grid;gap:12px}
-    @media(min-width:600px){.contact-list{grid-template-columns:1fr 1fr}}
-    .contact-item{display:flex;align-items:center;gap:12px;background:var(--paper);border:var(--border);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
-
-    /* FOOTER */
-    footer{padding:28px 0;color:#64748b}
-
-    /* Animaciones */
-    [data-animate]{opacity:0;transform:translateY(8px);animation:fadeUp .6s ease forwards}
-    [data-animate="2"]{animation-delay:.1s}
-    [data-animate="3"]{animation-delay:.2s}
-    [data-animate="4"]{animation-delay:.3s}
-    @keyframes fadeUp{to{opacity:1;transform:none}}
+    .cert-logo{height:38px;width:auto;margin-bottom:8px;filter:drop-shadow(0 4px 6px rgba(0,0,0,.15))}
+    .cta-strip{background:linear-gradient(90deg,var(--accent),#e8d08a);color:#1a1a1a;padding:28px 0}
+    .cta-strip .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    footer{padding:28px 0;color:#64748b;text-align:center}
   </style>
 </head>
 <body>
-  <!-- NAV -->
   <nav class="nav">
     <div class="container nav-wrap">
-      <a class="brand" href="#inicio" aria-label="Ir al inicio">
-        <img src="logo.png" alt="Logo ANTAREX" />
-        <span>ANTAREX</span>
-      </a>
-      <div class="menu" role="navigation" aria-label="Secciones del sitio">
+      <a class="brand" href="#inicio"><img src="logo.png" alt="Logo ANTAREX" /> ANTAREX</a>
+      <div class="menu">
         <a href="#servicios">Servicios</a>
         <a href="#por-que">¿Por qué elegirnos?</a>
+        <a href="#certificaciones">Certificaciones</a>
         <a href="#contacto">Contacto</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
   <header id="inicio" class="hero">
     <div class="container hero-inner">
-      <div data-animate="1">
+      <div>
         <div class="kicker">Tecnología • Redes • Seguridad</div>
         <h1>Soluciones seguras para un mundo conectado.</h1>
-        <p class="lead">Cableado estructurado, redes inalámbricas Wi‑Fi 6, cámaras de seguridad, cercas eléctricas, domótica y configuración de equipos para hogares y negocios en Costa Rica.</p>
+        <p class="lead">Cableado estructurado, redes inalámbricas Wi-Fi 6, cámaras de seguridad, cercas eléctricas, domótica y configuración de equipos para hogares y negocios en Costa Rica.</p>
         <div class="cta">
-          <a class="btn primary" href="https://wa.me/50672903518?text=Hola%20ANTAREX%2C%20me%20gustar%C3%ADa%20cotizar%20sus%20servicios." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-            WhatsApp
-          </a>
-          <a class="btn" href="mailto:jarguedasj1989@gmail.com?subject=Consulta%20ANTAREX&body=Hola%20ANTAREX%2C%20quisiera%20informaci%C3%B3n%20sobre%3A%20" aria-label="Enviar correo a ANTAREX">
-            Correo
-          </a>
+          <a class="btn primary" href="https://wa.me/50672903518" target="_blank">WhatsApp</a>
+          <a class="btn" href="mailto:jarguedasj1989@gmail.com?subject=Consulta%20ANTAREX">Correo</a>
         </div>
       </div>
-      <div class="logo-wrap" data-animate="2">
-        <img src="logo.png" alt="Logo ANTAREX" />
-      </div>
+      <div class="logo-wrap"><img src="logo.png" alt="Logo ANTAREX" /></div>
     </div>
   </header>
 
-  <!-- SERVICIOS -->
   <section id="servicios">
     <div class="container">
       <h2 class="title">Servicios</h2>
       <p class="sub">Soluciones integrales para hogares y empresas. Ingeniería, instalación y configuración con estándares profesionales.</p>
       <div class="grid cols-3">
-        <article class="card" data-animate="1">
-          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M3 12h18M3 17h18"/></svg></span>
-          <h3>Cableado estructurado</h3>
-          <p>Planificación, certificación y orden en racks y patch panels. Cat6/Cat6A.</p>
-        </article>
-        <article class="card" data-animate="2">
-          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-6"/><path d="M18 20v-4"/><path d="M6 20v-2"/><path d="M2 8h20"/><path d="M12 4v4"/></svg></span>
-          <h3>Redes inalámbricas Wi‑Fi 6</h3>
-          <p>Diseño y despliegue de APs con cobertura y rendimiento óptimos.</p>
-        </article>
-        <article class="card" data-animate="3">
-          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="8" cy="12" r="2"/><path d="M12 12h8"/></svg></span>
-          <h3>Cámaras y CCTV</h3>
-          <p>Instalación, direccionamiento y acceso remoto seguro para vigilancia.</p>
-        </article>
-        <article class="card" data-animate="1">
-          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8h16v-8"/><path d="M2 12h20"/><path d="M12 3v5"/></svg></span>
-          <h3>Cercas eléctricas</h3>
-          <p>Implementación con altos estándares de seguridad y normativas locales.</p>
-        </article>
-        <article class="card" data-animate="2">
-          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"/><path d="M12 2v20"/></svg></span>
-          <h3>Domótica y automatización</h3>
-          <p>Iluminación, control de acceso, sensores y escenarios inteligentes.</p>
-        </article>
-        <article class="card" data-animate="3">
-          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-4"/><rect x="6" y="4" width="12" height="8" rx="2"/><path d="M2 20h20"/></svg></span>
-          <h3>Configuración y soporte</h3>
-          <p>Routers, switches, firewalls y optimización de redes existentes.</p>
-        </article>
+        <div class="card"><h3>Cableado estructurado</h3><p>Planificación, certificación y orden en racks y patch panels. Cat6/Cat6A.</p></div>
+        <div class="card"><h3>Redes inalámbricas Wi-Fi 6</h3><p>Diseño y despliegue de APs con cobertura y rendimiento óptimos.</p></div>
+        <div class="card"><h3>Cámaras y CCTV</h3><p>Instalación, direccionamiento y acceso remoto seguro para vigilancia.</p></div>
+        <div class="card"><h3>Cercas eléctricas</h3><p>Implementación con altos estándares de seguridad y normativas locales.</p></div>
+        <div class="card"><h3>Domótica y automatización</h3><p>Iluminación, control de acceso, sensores y escenarios inteligentes.</p></div>
+        <div class="card"><h3>Configuración y soporte</h3><p>Routers, switches, firewalls y optimización de redes existentes.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- WHY US -->
   <section id="por-que" class="why">
     <div class="container">
       <span class="pill">¿Por qué elegir ANTAREX?</span>
-      <h2 class="title" style="margin-top:12px">Resultados confiables, enfoque en seguridad y orden</h2>
-      <div class="grid cols-3" style="margin-top:14px">
-        <article class="card" data-animate="1">
-          <h3>Seguridad como prioridad</h3>
-          <p>Buenas prácticas de hardening básico, segmentación y acceso remoto seguro.</p>
-        </article>
-        <article class="card" data-animate="2">
-          <h3>Implementación profesional</h3>
-          <p>Materiales certificados, documentación clara y entrega limpia y ordenada.</p>
-        </article>
-        <article class="card" data-animate="3">
-          <h3>Atención cercana</h3>
-          <p>Soporte post‑instalación y tiempos de respuesta ágiles.</p>
-        </article>
+      <h2 class="title">Resultados confiables, enfoque en seguridad y orden</h2>
+      <div class="grid cols-3">
+        <div class="card"><h3>Seguridad como prioridad</h3><p>Buenas prácticas de hardening, segmentación y acceso remoto seguro.</p></div>
+        <div class="card"><h3>Implementación profesional</h3><p>Materiales certificados, documentación clara y entrega limpia.</p></div>
+        <div class="card"><h3>Atención cercana</h3><p>Soporte post-instalación y tiempos de respuesta ágiles.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- CTA STRIP -->
-  <section class="cta-strip">
-    <div class="container wrap">
-      <h3 style="margin:0">¿Listo para modernizar tu red o tu hogar inteligente?</h3>
-      <a class="btn" href="https://wa.me/50672903518?text=Hola%20ANTAREX%2C%20necesito%20asesor%C3%ADa%20para%20mi%20proyecto." target="_blank" rel="noopener">Contáctanos por WhatsApp</a>
+  <section id="certificaciones">
+    <div class="container">
+      <span class="pill">Certificaciones</span>
+      <h2 class="title">Certificaciones que respaldan nuestra excelencia</h2>
+      <p class="sub">Nuestro equipo cuenta con certificaciones internacionales que garantizan la calidad, seguridad y eficiencia de cada proyecto. Estas credenciales reflejan el compromiso de ANTAREX con la mejora continua y la confianza de nuestros clientes.</p>
+      <div class="grid cols-3">
+        <div class="card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" class="cert-logo" alt="Cisco Logo">
+          <h3>Certificaciones Cisco</h3>
+          <p>CCNP Core Networking, DevNet Associate, CCNA, ENCOR, ISE y Networking Technologies. Experiencia validada en diseño, automatización y operación de redes empresariales.</p>
+        </div>
+        <div class="card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Amazon_Web_Services_Logo.svg" class="cert-logo" alt="AWS Logo">
+          <h3>Certificaciones Cloud</h3>
+          <p>AWS Academy Graduate – Cloud Architecting y Microsoft Azure Fundamentals. Competencia en arquitecturas híbridas, despliegue en la nube y gestión de servicios.</p>
+        </div>
+        <div class="card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Fortinet_logo.svg" class="cert-logo" alt="Fortinet Logo">
+          <h3>Seguridad y Gestión</h3>
+          <p>Introduction to the Threat Landscape (Fortinet) e ITIL v4 (PeopleCert). Conocimientos en ciberseguridad, continuidad operativa y gestión de servicios.</p>
+        </div>
+        <div class="card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/GitHub_logo_2023.svg" class="cert-logo" alt="GitHub Logo">
+          <h3>Desarrollo y Automatización</h3>
+          <p>GitHub Foundations y Scrum Foundation Professional Certificate. Capacitación en integración continua, control de versiones y metodologías ágiles.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- CONTACTO -->
+  <section class="cta-strip">
+    <div class="container wrap">
+      <h3>¿Listo para modernizar tu red o tu hogar inteligente?</h3>
+      <a class="btn" href="https://wa.me/50672903518" target="_blank">Contáctanos por WhatsApp</a>
+    </div>
+  </section>
+
   <section id="contacto">
     <div class="container">
       <h2 class="title">Contacto</h2>
       <p class="sub">Cuéntanos tu proyecto y te asesoramos sin costo.</p>
-      <div class="contact-list" role="list">
-        <a class="contact-item" role="listitem" href="https://wa.me/50672903518?text=Hola%20ANTAREX%2C%20quisiera%20cotizar%20un%20proyecto." target="_blank" rel="noopener">
-          <strong>WhatsApp</strong>
-          <span>+506 7290‑3518</span>
-        </a>
-        <a class="contact-item" role="listitem" href="mailto:jarguedasj1989@gmail.com?subject=Solicitud%20de%20informaci%C3%B3n%20ANTAREX&body=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20...">
-          <strong>Correo</strong>
-          <span>jarguedasj1989@gmail.com</span>
-        </a>
+      <div class="grid cols-3">
+        <div class="card"><strong>WhatsApp</strong><p>+506 7290-3518</p></div>
+        <div class="card"><strong>Correo</strong><p>jarguedasj1989@gmail.com</p></div>
+        <div class="card"><strong>Ubicación</strong><p>Costa Rica</p></div>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="container">
-      <small>© <span id="y"></span> ANTAREX. Todos los derechos reservados.</small>
-    </div>
+    <div class="container">© <span id="y"></span> ANTAREX. Todos los derechos reservados.</div>
   </footer>
 
-  <script>
-    // Año dinámico
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
