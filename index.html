@@ -17,13 +17,14 @@
   <meta property="og:image" content="logo.png" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_CR" />
-  <meta property="og:url" content="https://jorgea.github.io/Antarex-web/" />
+  <!-- Ajusta esta URL si publicas en otro dominio -->
+  <meta property="og:url" content="https://jorgearguedas.github.io/antarex" />
 
   <link rel="icon" type="image/png" href="logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    :root {
+    :root{
       --bg:#f6f8fb;
       --paper:#ffffff;
       --muted:#5b6676;
@@ -52,63 +53,19 @@
     .menu a:hover{background:rgba(202,166,74,.12)}
 
     /* HERO */
-    header.hero {
-      padding:90px 0 60px;
-      background:radial-gradient(1000px 600px at 30% 20%, rgba(202,166,74,.08), transparent 60%), var(--bg);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      flex-direction:column;
-      text-align:center;
-    }
-    .hero img {
-      width:220px;
-      max-width:70vw;
-      margin-bottom:20px;
-      filter:drop-shadow(0 8px 20px rgba(202,166,74,.25));
-    }
-    .hero h1 {
-      font-size:clamp(2rem,5vw,3rem);
-      margin:10px 0 6px;
-      background:linear-gradient(90deg,var(--accent-strong),#000);
-      -webkit-background-clip:text;
-      color:transparent;
-    }
-    .hero p {
-      color:#475569;
-      font-size:1.1rem;
-      max-width:600px;
-      margin:auto;
-    }
-    .cta {
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      justify-content:center;
-      margin-top:18px;
-    }
-    .btn {
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:12px 18px;
-      border-radius:14px;
-      border:var(--border);
-      background:var(--paper);
-      box-shadow:var(--shadow);
-      font-weight:700;
-      transition:all .25s ease;
-    }
-    .btn.primary {
-      background:linear-gradient(180deg,rgba(202,166,74,.18),rgba(202,166,74,.08));
-      border:1px solid rgba(202,166,74,.45);
-    }
-    .btn:hover {
-      transform:translateY(-2px);
-      box-shadow:0 6px 18px rgba(202,166,74,.25);
-    }
+    header.hero{padding:72px 0 36px;background:radial-gradient(1000px 600px at 30% 20%, rgba(202,166,74,.08), transparent 60%), var(--bg)}
+    .hero-inner{display:grid;gap:24px;grid-template-columns:1.2fr .8fr;align-items:center}
+    .logo-wrap{display:flex;justify-content:center}
+    .logo-wrap img{width:min(260px,60vw);filter:drop-shadow(0 10px 25px rgba(202,166,74,.35))}
+    .kicker{font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:#475569;font-weight:700}
+    h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.06;margin:10px 0;background:linear-gradient(90deg,var(--accent-strong),#000);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{color:#475569;font-size:1.08rem}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:14px;border:var(--border);background:var(--paper);box-shadow:var(--shadow);font-weight:700;transition:all .25s ease}
+    .btn.primary{background:linear-gradient(180deg,rgba(202,166,74,.18),rgba(202,166,74,.08));border:1px solid rgba(202,166,74,.45)}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(202,166,74,.25)}
 
-    /* Secciones generales */
+    /* SECCIONES GENERALES */
     section{padding:64px 0}
     .title{font-size:1.9rem;margin:0 0 12px}
     .sub{color:#556070;margin-bottom:20px}
@@ -126,19 +83,23 @@
     .cta-strip{background:linear-gradient(90deg,var(--accent),#e8d08a);color:#1a1a1a;padding:28px 0}
     .cta-strip .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
 
-    /* Formulario */
+    /* CONTACT FORM */
     .contact-form{display:grid;gap:12px;max-width:680px;margin:0 auto}
     .contact-form input,.contact-form textarea{
       padding:12px 14px;border-radius:12px;border:1px solid rgba(15,23,42,.12);background:#fff;font:inherit;color:#0f172a
     }
     .contact-form textarea{min-height:120px;resize:vertical}
 
-    /* Footer */
+    /* FOOTER */
     footer{padding:28px 0;background:#0f172a;color:#e2e8f0;text-align:center}
     footer a{color:#caa64a;font-weight:600;text-decoration:none}
     footer a:hover{text-decoration:underline}
 
-    /* Botón flotante WhatsApp */
+    /* Animaciones */
+    [data-anim]{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+    [data-anim].visible{opacity:1;transform:translateY(0)}
+
+    /* Botón flotante de WhatsApp */
     .whatsapp-float{
       position:fixed;bottom:25px;right:25px;
       background:#25D366;color:white;
@@ -150,7 +111,6 @@
     .whatsapp-float:hover{transform:scale(1.1);background:#20b857;}
   </style>
 </head>
-
 <body>
   <!-- NAV -->
   <nav class="nav">
@@ -168,16 +128,33 @@
 
   <!-- HERO -->
   <header id="inicio" class="hero">
-    <img src="logo.png" alt="Logo ANTAREX" loading="lazy" />
-    <h1>Soluciones seguras para un mundo conectado</h1>
-    <p>Cableado estructurado, redes inalámbricas Wi-Fi, cámaras de seguridad, cercas eléctricas, domótica y configuración de equipos para hogares y negocios en Costa Rica.</p>
-    <div class="cta">
-      <a class="btn primary" href="https://wa.me/50672903518" target="_blank" rel="noopener">WhatsApp</a>
-      <a class="btn" href="mailto:Antarex.costarica@outlook.com?subject=Consulta%20ANTAREX" rel="noopener">Correo</a>
+    <div class="container hero-inner">
+      <div data-anim="fade">
+        <div class="kicker">Tecnología • Redes • Seguridad</div>
+        <h1>Soluciones seguras para un mundo conectado.</h1>
+        <p class="lead">Cableado estructurado, redes inalámbricas Wi-Fi, cámaras de seguridad, cercas eléctricas, domótica y configuración de equipos para hogares y negocios en Costa Rica.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://wa.me/50672903518" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" href="mailto:Antarex.costarica@outlook.com?subject=Consulta%20ANTAREX" rel="noopener">Correo</a>
+        </div>
+      </div>
+      <div class="logo-wrap" data-anim="fade"><img src="logo.png" alt="Logo ANTAREX" loading="lazy" /></div>
     </div>
   </header>
 
-<!-- SERVICIOS -->
+  <!-- NOSOTROS -->
+  <section id="nosotros" style="background:#fff;border-top:1px solid rgba(15,23,42,.08);">
+    <div class="container">
+      <h2 class="title" data-anim="fade">Sobre ANTAREX</h2>
+      <p class="sub" data-anim="fade">
+        Somos una empresa costarricense especializada en soluciones de redes, seguridad y automatización. 
+        Nos enfocamos en ofrecer conectividad confiable, instalaciones seguras y tecnología de vanguardia, 
+        brindando a nuestros clientes la tranquilidad de contar con un aliado técnico de confianza.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
   <section id="servicios">
     <div class="container">
       <h2 class="title" data-anim="fade">Servicios</h2>
@@ -385,14 +362,25 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container">© <span id="y"></span> ANTAREX. Todos los derechos reservados.</div>
   </footer>
 
+  <!-- BOTÓN FLOTANTE -->
   <a href="https://wa.me/50672903518" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">💬</a>
 
   <script>
+    // Año dinámico
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Animaciones globales
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('visible'); }
+      });
+    },{threshold:0.1});
+    document.querySelectorAll('[data-anim]').forEach(el=>observer.observe(el));
   </script>
 </body>
 </html>
