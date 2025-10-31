@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://jorgearguedas.github.io/antarex/</loc>
+    <lastmod>2025-10-31</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://jorgearguedas.github.io/antarex/#nosotros</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jorgearguedas.github.io/antarex/#servicios</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jorgearguedas.github.io/antarex/#por-que</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jorgearguedas.github.io/antarex/#certificaciones</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jorgearguedas.github.io/antarex/#contacto</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jorgearguedas.github.io/antarex/#formulario</loc>
+    <priority>0.7</priority>
+  </url>
+</urlset>
