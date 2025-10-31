@@ -96,7 +96,137 @@
   </header>
 
   <!-- SERVICIOS -->
-  <!-- Aquí insertarás la versión mejorada que te di antes (ya con animaciones y hover dorado) -->
+  <section id="servicios">
+  <div class="container">
+    <h2 class="title" data-anim="fade">Servicios</h2>
+    <p class="sub" data-anim="fade">Soluciones tecnológicas integrales para hogares, oficinas y empresas. Diseñadas bajo estándares internacionales de calidad y ejecutadas con precisión técnica.</p>
+
+    <style>
+      .icono {
+        display:flex;align-items:center;justify-content:center;
+        width:58px;height:58px;margin-bottom:12px;
+        border-radius:14px;
+        background:linear-gradient(180deg,rgba(202,166,74,.25),rgba(202,166,74,.1));
+        box-shadow:0 4px 10px rgba(202,166,74,.25);
+        transition:all .3s ease;
+      }
+      .icono svg{width:30px;height:30px;fill:#caa64a;transition:all .3s ease}
+      .card:hover .icono{transform:translateY(-4px);box-shadow:0 6px 18px rgba(202,166,74,.4);background:linear-gradient(180deg,rgba(202,166,74,.35),rgba(202,166,74,.15))}
+      .card:hover .icono svg{fill:#a88934;transform:scale(1.08)}
+      /* Animaciones de aparición */
+      [data-anim]{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+      [data-anim].visible{opacity:1;transform:translateY(0)}
+    </style>
+
+    <!-- INFRAESTRUCTURA -->
+    <h3 style="margin-top:30px;color:#a88934;" data-anim="fade">Infraestructura y Cableado</h3>
+    <div class="grid cols-3">
+      <div class="card" data-anim="fade">
+        <div class="icono">
+          <svg viewBox="0 0 24 24"><path d="M3 3h18v2H3zm0 8h18v2H3zm0 8h18v2H3z"/></svg>
+        </div>
+        <h4>Instalación y certificación Cat6 / Cat6A</h4>
+        <p>Diseño e instalación de cableado estructurado, racks, patch panels y canalizaciones con orden y calidad profesional.</p>
+      </div>
+    </div>
+
+    <!-- REDES -->
+    <h3 style="margin-top:40px;color:#a88934;" data-anim="fade">Redes Inalámbricas y Conectividad</h3>
+    <div class="grid cols-3">
+      <div class="card" data-anim="fade">
+        <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 3C7 3 2.73 5.11 0 9l2.5 1.5A9.996 9.996 0 0 1 12 5c3.31 0 6.31 1.34 8.5 3.5L23 9c-2.73-3.89-7-6-11-6z"/></svg></div>
+        <h4>Diseño de redes Wi-Fi 6</h4>
+        <p>Estudio de cobertura, planificación de APs y configuración para máximo rendimiento en hogares y negocios.</p>
+      </div>
+      <div class="card" data-anim="fade">
+        <div class="icono"><svg viewBox="0 0 24 24"><path d="M9 2v2h6V2h2v2h4v18H3V4h4V2h2zm10 4H5v14h14V6z"/></svg></div>
+        <h4>Controladoras y monitoreo</h4>
+        <p>Configuración de plataformas como TP-Link Omada, Cisco Meraki o Unifi para gestión centralizada y análisis de tráfico.</p>
+      </div>
+      <div class="card" data-anim="fade">
+        <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 8c-2.21 0-4 1.79-4 4h2a2 2 0 1 1 2 2v2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"/></svg></div>
+        <h4>Optimización de red</h4>
+        <p>Diagnóstico y mejoras de señal, canales y ancho de banda para asegurar estabilidad y roaming eficiente.</p>
+      </div>
+    </div>
+
+    <!-- SEGURIDAD -->
+    <h3 style="margin-top:40px;color:#a88934;" data-anim="fade">Seguridad y Monitoreo</h3>
+    <div class="grid cols-3">
+      <div class="card" data-anim="fade">
+        <div class="icono"><svg viewBox="0 0 24 24"><path d="M4 4h16v14H4zM2 20h20v2H2z"/></svg></div>
+        <h4>Cámaras IP y sistemas CCTV</h4>
+        <p>Instalación de cámaras de seguridad con grabación local o en la nube, visualización remota y alertas inteligentes.</p>
+      </div>
+      <div class="card" data-anim="fade">
+        <div class="icono"><svg viewBox="0 0 24 24"><path d="M4 12v8h16v-8H4zm8-8L4 8h16l-8-4z"/></svg></div>
+        <h4>Cercas eléctricas y sensores</h4>
+        <p>Implementación de sistemas perimetrales integrados con alarmas, domótica y control de accesos.</p>
+      </div>
+      <div class="card" data-anim="fade">
+        <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20A10 10 0 0 1 12 2z"/></svg></div>
+        <h4>Monitoreo remoto</h4>
+        <p>Configuración de acceso seguro a sistemas CCTV o controladores desde cualquier dispositivo conectado.</p>
+      </div>
+    </div>
+
+    <!-- DOMÓTICA -->
+    <h3 style="margin-top:40px;color:#a88934;" data-anim="fade">Domótica y Automatización</h3>
+    <div class="grid cols-3">
+      <div class="card" data-anim="fade">
+        <div class="icono"><svg viewBox="0 0 24 24"><path d="M6 22h12v-2H6v2zM6 2h12v2H6V2zm5 5h2v10h-2V7z"/></svg></div>
+        <h4>Control de iluminación y clima</h4>
+        <p>Automatización de ambientes mediante sensores, horarios o control por voz (Alexa, Google Home).</p>
+      </div>
+      <div class="card" data-anim="fade">
+        <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></div>
+        <h4>Escenarios inteligentes</h4>
+        <p>Integración de sistemas que ajustan iluminación, sonido y temperatura según hábitos o necesidades.</p>
+      </div>
+      <div class="card" data-anim="fade">
+        <div class="icono"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg></div>
+        <h4>Integración IoT</h4>
+        <p>Soluciones conectadas para hogares y empresas: enchufes inteligentes, cámaras, cerraduras y más.</p>
+      </div>
+    </div>
+
+    <!-- SOPORTE -->
+    <h3 style="margin-top:40px;color:#a88934;" data-anim="fade">Soporte y Consultoría</h3>
+    <div class="grid cols-3">
+      <div class="card" data-anim="fade">
+        <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/></svg></div>
+        <h4>Soporte técnico remoto y en sitio</h4>
+        <p>Diagnóstico, mantenimiento y resolución de incidencias en redes e infraestructura existente.</p>
+      </div>
+      <div class="card" data-anim="fade">
+        <div class="icono"><svg viewBox="0 0 24 24"><path d="M4 4h16v4H4zm0 8h16v8H4z"/></svg></div>
+        <h4>Seguridad y respaldo</h4>
+        <p>Actualización de firmware, auditoría de seguridad y configuración de respaldos automáticos de equipos.</p>
+      </div>
+      <div class="card" data-anim="fade">
+        <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 2l8 8H4z"/></svg></div>
+        <h4>Consultoría en diseño de red</h4>
+        <p>Asesoría experta en planeamiento, dimensionamiento e implementación de soluciones de conectividad.</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center;margin-top:40px;" data-anim="fade">
+      <a class="btn primary" href="https://wa.me/50672903518?text=Hola%20ANTAREX,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank">Solicitar cotización</a>
+    </div>
+  </div>
+
+  <script>
+    // Animación al hacer scroll
+    const observador = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){e.target.classList.add('visible');}
+      });
+    },{threshold:0.1});
+    document.querySelectorAll('[data-anim]').forEach(el=>observador.observe(el));
+  </script>
+</section>
+
 
   <!-- WHY US -->
   <section id="por-que" class="why">
