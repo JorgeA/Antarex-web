@@ -3,10 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ANTAREX | Soluciones seguras para un mundo conectado.</title>
-  <meta name="description" content="Servicios profesionales de cableado estructurado, redes inalámbricas, cámaras de seguridad, cercas eléctricas, domótica y configuración de equipos en Costa Rica." />
+  <title>ANTAREX | Redes, Seguridad y Domótica en Costa Rica</title>
+
+  <!-- SEO principal -->
+  <meta name="description" content="Servicios profesionales de cableado estructurado, redes inalámbricas Wi-Fi 6, cámaras de seguridad, cercas eléctricas, domótica y configuración de equipos en Costa Rica." />
   <meta name="keywords" content="cableado estructurado, redes inalámbricas, Wi-Fi, cámaras, CCTV, domótica, cercas eléctricas, soporte de redes, Costa Rica, ANTAREX" />
+  <meta name="author" content="ANTAREX - Jorge Arguedas" />
   <meta name="theme-color" content="#ffffff" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="ANTAREX | Redes, Seguridad y Domótica en Costa Rica" />
+  <meta property="og:description" content="Cableado, Wi-Fi 6, cámaras, domótica y seguridad para hogares y negocios en Costa Rica." />
+  <meta property="og:image" content="logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CR" />
+  <!-- Ajusta esta URL si publicas en otro dominio -->
+  <meta property="og:url" content="https://jorgearguedas.github.io/antarex" />
+
   <link rel="icon" type="image/png" href="logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -24,18 +37,23 @@
       --shadow:0 10px 30px rgba(15,23,42,.06);
     }
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
     a{text-decoration:none;color:inherit}
     img{max-width:100%;height:auto}
     .container{max-width:var(--maxw);margin:auto;padding:0 20px}
-    .nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:var(--border);backdrop-filter:saturate(140%) blur(12px)}
+
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:var(--border);backdrop-filter:saturate(140%) blur(12px);box-shadow:0 2px 10px rgba(0,0,0,.06)}
     .nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
     .brand{display:flex;align-items:center;gap:10px;font-weight:800}
     .brand img{height:36px;width:auto}
     .menu{display:flex;gap:14px}
     .menu a{padding:10px 12px;border-radius:10px;color:#334155;font-weight:500}
     .menu a:hover{background:rgba(202,166,74,.12)}
-    header.hero{padding:72px 0 36px}
+
+    /* HERO */
+    header.hero{padding:72px 0 36px;background:radial-gradient(1000px 600px at 30% 20%, rgba(202,166,74,.08), transparent 60%), var(--bg)}
     .hero-inner{display:grid;gap:24px;grid-template-columns:1.2fr .8fr;align-items:center}
     .logo-wrap{display:flex;justify-content:center}
     .logo-wrap img{width:min(260px,60vw);filter:drop-shadow(0 10px 25px rgba(202,166,74,.35))}
@@ -46,6 +64,8 @@
     .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:14px;border:var(--border);background:var(--paper);box-shadow:var(--shadow);font-weight:700;transition:all .25s ease}
     .btn.primary{background:linear-gradient(180deg,rgba(202,166,74,.18),rgba(202,166,74,.08));border:1px solid rgba(202,166,74,.45)}
     .btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(202,166,74,.25)}
+
+    /* SECCIONES GENERALES */
     section{padding:64px 0}
     .title{font-size:1.9rem;margin:0 0 12px}
     .sub{color:#556070;margin-bottom:20px}
@@ -54,17 +74,31 @@
     .card{background:var(--paper);border:var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);transition:all .3s ease}
     .card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(15,23,42,.1);border-color:rgba(202,166,74,.45)}
     .card h3,.card h4{margin:6px 0 8px}
+
     .why{background:#fbfcfe;border-top:var(--border);border-bottom:var(--border)}
     .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(202,166,74,.1);border:1px solid rgba(202,166,74,.35);font-weight:600;color:#6b4f16}
+
     .cert-logo{height:38px;width:auto;margin-bottom:8px;filter:drop-shadow(0 4px 6px rgba(0,0,0,.15))}
+
     .cta-strip{background:linear-gradient(90deg,var(--accent),#e8d08a);color:#1a1a1a;padding:28px 0}
     .cta-strip .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+
+    /* CONTACT FORM */
+    .contact-form{display:grid;gap:12px;max-width:680px;margin:0 auto}
+    .contact-form input,.contact-form textarea{
+      padding:12px 14px;border-radius:12px;border:1px solid rgba(15,23,42,.12);background:#fff;font:inherit;color:#0f172a
+    }
+    .contact-form textarea{min-height:120px;resize:vertical}
+
+    /* FOOTER */
     footer{padding:28px 0;background:#0f172a;color:#e2e8f0;text-align:center}
     footer a{color:#caa64a;font-weight:600;text-decoration:none}
     footer a:hover{text-decoration:underline}
+
     /* Animaciones */
     [data-anim]{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
     [data-anim].visible{opacity:1;transform:translateY(0)}
+
     /* Botón flotante de WhatsApp */
     .whatsapp-float{
       position:fixed;bottom:25px;right:25px;
@@ -81,7 +115,7 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="container nav-wrap">
-      <a class="brand" href="#inicio"><img src="logo.png" alt="Logo ANTAREX" /> ANTAREX</a>
+      <a class="brand" href="#inicio"><img src="logo.png" alt="Logo ANTAREX" loading="lazy" /> ANTAREX</a>
       <div class="menu">
         <a href="#nosotros">Nosotros</a>
         <a href="#servicios">Servicios</a>
@@ -100,11 +134,11 @@
         <h1>Soluciones seguras para un mundo conectado.</h1>
         <p class="lead">Cableado estructurado, redes inalámbricas Wi-Fi 6, cámaras de seguridad, cercas eléctricas, domótica y configuración de equipos para hogares y negocios en Costa Rica.</p>
         <div class="cta">
-          <a class="btn primary" href="https://wa.me/50672903518" target="_blank">WhatsApp</a>
-          <a class="btn" href="mailto:jarguedasj1989@gmail.com?subject=Consulta%20ANTAREX">Correo</a>
+          <a class="btn primary" href="https://wa.me/50672903518" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" href="mailto:Antarex.costarica@outlook.com?subject=Consulta%20ANTAREX" rel="noopener">Correo</a>
         </div>
       </div>
-      <div class="logo-wrap" data-anim="fade"><img src="logo.png" alt="Logo ANTAREX" /></div>
+      <div class="logo-wrap" data-anim="fade"><img src="logo.png" alt="Logo ANTAREX" loading="lazy" /></div>
     </div>
   </header>
 
@@ -121,139 +155,131 @@
   </section>
 
   <!-- SERVICIOS -->
- <section id="servicios">
-  <div class="container">
-    <h2 class="title" data-anim="fade">Servicios</h2>
-    <p class="sub" data-anim="fade">Soluciones tecnológicas integrales para hogares, oficinas y empresas. Diseñadas bajo estándares internacionales de calidad y ejecutadas con precisión técnica.</p>
+  <section id="servicios">
+    <div class="container">
+      <h2 class="title" data-anim="fade">Servicios</h2>
+      <p class="sub" data-anim="fade">Soluciones tecnológicas integrales para hogares, oficinas y empresas. Diseñadas bajo estándares internacionales de calidad y ejecutadas con precisión técnica.</p>
 
-    <style>
-      .icono {
-        display:flex;align-items:center;justify-content:center;
-        width:58px;height:58px;margin-bottom:12px;
-        border-radius:14px;
-        background:linear-gradient(180deg,rgba(202,166,74,.25),rgba(202,166,74,.1));
-        box-shadow:0 4px 10px rgba(202,166,74,.25);
-        transition:all .3s ease;
-      }
-      .icono svg{width:30px;height:30px;fill:#caa64a;transition:all .3s ease}
-      .card:hover .icono{transform:translateY(-4px);box-shadow:0 6px 18px rgba(202,166,74,.4);background:linear-gradient(180deg,rgba(202,166,74,.35),rgba(202,166,74,.15))}
-      .card:hover .icono svg{fill:#a88934;transform:scale(1.08)}
-      /* Animaciones de aparición */
-      [data-anim]{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
-      [data-anim].visible{opacity:1;transform:translateY(0)}
-    </style>
+      <style>
+        .icono {
+          display:flex;align-items:center;justify-content:center;
+          width:58px;height:58px;margin-bottom:12px;border-radius:14px;
+          background:linear-gradient(180deg,rgba(202,166,74,.25),rgba(202,166,74,.1));
+          box-shadow:0 4px 10px rgba(202,166,74,.25);transition:all .3s ease;
+        }
+        .icono svg{width:30px;height:30px;fill:#caa64a;transition:all .3s ease}
+        .card:hover .icono{transform:translateY(-4px);box-shadow:0 6px 18px rgba(202,166,74,.4);background:linear-gradient(180deg,rgba(202,166,74,.35),rgba(202,166,74,.15))}
+        .card:hover .icono svg{fill:#a88934;transform:scale(1.08)}
+      </style>
 
-    <!-- INFRAESTRUCTURA -->
-    <h3 style="margin-top:30px;color:#a88934;" data-anim="fade">Infraestructura y Cableado</h3>
-    <div class="grid cols-3">
-      <div class="card" data-anim="fade">
-        <div class="icono">
-          <svg viewBox="0 0 24 24"><path d="M3 3h18v2H3zm0 8h18v2H3zm0 8h18v2H3z"/></svg>
+      <!-- INFRAESTRUCTURA -->
+      <h3 style="margin-top:30px;color:#a88934;" data-anim="fade">Infraestructura y Cableado</h3>
+      <div class="grid cols-3">
+        <div class="card" data-anim="fade">
+          <div class="icono">
+            <svg viewBox="0 0 24 24"><path d="M3 3h18v2H3zm0 8h18v2H3zm0 8h18v2H3z"/></svg>
+          </div>
+          <h4>Instalación y certificación Cat6 / Cat6A</h4>
+          <p>Diseño e instalación de cableado estructurado, racks, patch panels y canalizaciones con orden y calidad profesional.</p>
         </div>
-        <h4>Instalación y certificación Cat6 / Cat6A</h4>
-        <p>Diseño e instalación de cableado estructurado, racks, patch panels y canalizaciones con orden y calidad profesional.</p>
+      </div>
+
+      <!-- REDES -->
+      <h3 style="margin-top:40px;color:#a88934;" data-anim="fade">Redes Inalámbricas y Conectividad</h3>
+      <div class="grid cols-3">
+        <div class="card" data-anim="fade">
+          <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 3C7 3 2.73 5.11 0 9l2.5 1.5A9.996 9.996 0 0 1 12 5c3.31 0 6.31 1.34 8.5 3.5L23 9c-2.73-3.89-7-6-11-6z"/></svg></div>
+          <h4>Diseño de redes Wi-Fi 6</h4>
+          <p>Estudio de cobertura, planificación de APs y configuración para máximo rendimiento en hogares y negocios.</p>
+        </div>
+        <div class="card" data-anim="fade">
+          <div class="icono"><svg viewBox="0 0 24 24"><path d="M9 2v2h6V2h2v2h4v18H3V4h4V2h2zm10 4H5v14h14V6z"/></svg></div>
+          <h4>Controladoras y monitoreo</h4>
+          <p>Gestión centralizada con TP-Link Omada, Cisco Meraki o UniFi y análisis de tráfico.</p>
+        </div>
+        <div class="card" data-anim="fade">
+          <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 8c-2.21 0-4 1.79-4 4h2a2 2 0 1 1 2 2v2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"/></svg></div>
+          <h4>Optimización de red</h4>
+          <p>Mejoras de señal, canales y ancho de banda para estabilidad y roaming eficiente.</p>
+        </div>
+      </div>
+
+      <!-- SEGURIDAD -->
+      <h3 style="margin-top:40px;color:#a88934;" data-anim="fade">Seguridad y Monitoreo</h3>
+      <div class="grid cols-3">
+        <div class="card" data-anim="fade">
+          <div class="icono"><svg viewBox="0 0 24 24"><path d="M4 4h16v14H4zM2 20h20v2H2z"/></svg></div>
+          <h4>Cámaras IP y sistemas CCTV</h4>
+          <p>Grabación local o en la nube, visualización remota y alertas inteligentes.</p>
+        </div>
+        <div class="card" data-anim="fade">
+          <div class="icono"><svg viewBox="0 0 24 24"><path d="M4 12v8h16v-8H4zm8-8L4 8h16l-8-4z"/></svg></div>
+          <h4>Cercas eléctricas y sensores</h4>
+          <p>Sistemas perimetrales integrados con alarmas, domótica y control de accesos.</p>
+        </div>
+        <div class="card" data-anim="fade">
+          <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20A10 10 0 0 1 12 2z"/></svg></div>
+          <h4>Monitoreo remoto</h4>
+          <p>Acceso seguro a CCTV o controladores desde cualquier dispositivo conectado.</p>
+        </div>
+      </div>
+
+      <!-- DOMÓTICA -->
+      <h3 style="margin-top:40px;color:#a88934;" data-anim="fade">Domótica y Automatización</h3>
+      <div class="grid cols-3">
+        <div class="card" data-anim="fade">
+          <div class="icono"><svg viewBox="0 0 24 24"><path d="M6 22h12v-2H6v2zM6 2h12v2H6V2zm5 5h2v10h-2V7z"/></svg></div>
+          <h4>Control de iluminación y clima</h4>
+          <p>Automatización por sensores, horarios o voz (Alexa, Google Home).</p>
+        </div>
+        <div class="card" data-anim="fade">
+          <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></div>
+          <h4>Escenarios inteligentes</h4>
+          <p>Ambientes que ajustan iluminación, sonido y temperatura según hábitos.</p>
+        </div>
+        <div class="card" data-anim="fade">
+          <div class="icono"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg></div>
+          <h4>Integración IoT</h4>
+          <p>Enchufes, cámaras, cerraduras y más para hogares y empresas.</p>
+        </div>
+      </div>
+
+      <!-- SOPORTE -->
+      <h3 style="margin-top:40px;color:#a88934;" data-anim="fade">Soporte y Consultoría</h3>
+      <div class="grid cols-3">
+        <div class="card" data-anim="fade">
+          <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/></svg></div>
+          <h4>Soporte técnico remoto y en sitio</h4>
+          <p>Diagnóstico, mantenimiento y resolución de incidencias.</p>
+        </div>
+        <div class="card" data-anim="fade">
+          <div class="icono"><svg viewBox="0 0 24 24"><path d="M4 4h16v4H4zm0 8h16v8H4z"/></svg></div>
+          <h4>Seguridad y respaldo</h4>
+          <p>Firmware, auditoría de seguridad y respaldos automáticos.</p>
+        </div>
+        <div class="card" data-anim="fade">
+          <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 2l8 8H4z"/></svg></div>
+          <h4>Consultoría en diseño de red</h4>
+          <p>Planeamiento, dimensionamiento e implementación de conectividad.</p>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div style="text-align:center;margin-top:40px;" data-anim="fade">
+        <a class="btn primary" href="https://wa.me/50672903518?text=Hola%20ANTAREX,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">Solicitar cotización</a>
       </div>
     </div>
 
-    <!-- REDES -->
-    <h3 style="margin-top:40px;color:#a88934;" data-anim="fade">Redes Inalámbricas y Conectividad</h3>
-    <div class="grid cols-3">
-      <div class="card" data-anim="fade">
-        <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 3C7 3 2.73 5.11 0 9l2.5 1.5A9.996 9.996 0 0 1 12 5c3.31 0 6.31 1.34 8.5 3.5L23 9c-2.73-3.89-7-6-11-6z"/></svg></div>
-        <h4>Diseño de redes Wi-Fi 6</h4>
-        <p>Estudio de cobertura, planificación de APs y configuración para máximo rendimiento en hogares y negocios.</p>
-      </div>
-      <div class="card" data-anim="fade">
-        <div class="icono"><svg viewBox="0 0 24 24"><path d="M9 2v2h6V2h2v2h4v18H3V4h4V2h2zm10 4H5v14h14V6z"/></svg></div>
-        <h4>Controladoras y monitoreo</h4>
-        <p>Configuración de plataformas como TP-Link Omada, Cisco Meraki o Unifi para gestión centralizada y análisis de tráfico.</p>
-      </div>
-      <div class="card" data-anim="fade">
-        <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 8c-2.21 0-4 1.79-4 4h2a2 2 0 1 1 2 2v2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"/></svg></div>
-        <h4>Optimización de red</h4>
-        <p>Diagnóstico y mejoras de señal, canales y ancho de banda para asegurar estabilidad y roaming eficiente.</p>
-      </div>
-    </div>
+    <script>
+      // Animación al hacer scroll (solo para elementos dentro de Servicios)
+      const obsServicios = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); }});
+      },{threshold:0.1});
+      document.querySelectorAll('#servicios [data-anim]').forEach(el=>obsServicios.observe(el));
+    </script>
+  </section>
 
-    <!-- SEGURIDAD -->
-    <h3 style="margin-top:40px;color:#a88934;" data-anim="fade">Seguridad y Monitoreo</h3>
-    <div class="grid cols-3">
-      <div class="card" data-anim="fade">
-        <div class="icono"><svg viewBox="0 0 24 24"><path d="M4 4h16v14H4zM2 20h20v2H2z"/></svg></div>
-        <h4>Cámaras IP y sistemas CCTV</h4>
-        <p>Instalación de cámaras de seguridad con grabación local o en la nube, visualización remota y alertas inteligentes.</p>
-      </div>
-      <div class="card" data-anim="fade">
-        <div class="icono"><svg viewBox="0 0 24 24"><path d="M4 12v8h16v-8H4zm8-8L4 8h16l-8-4z"/></svg></div>
-        <h4>Cercas eléctricas y sensores</h4>
-        <p>Implementación de sistemas perimetrales integrados con alarmas, domótica y control de accesos.</p>
-      </div>
-      <div class="card" data-anim="fade">
-        <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20A10 10 0 0 1 12 2z"/></svg></div>
-        <h4>Monitoreo remoto</h4>
-        <p>Configuración de acceso seguro a sistemas CCTV o controladores desde cualquier dispositivo conectado.</p>
-      </div>
-    </div>
-
-    <!-- DOMÓTICA -->
-    <h3 style="margin-top:40px;color:#a88934;" data-anim="fade">Domótica y Automatización</h3>
-    <div class="grid cols-3">
-      <div class="card" data-anim="fade">
-        <div class="icono"><svg viewBox="0 0 24 24"><path d="M6 22h12v-2H6v2zM6 2h12v2H6V2zm5 5h2v10h-2V7z"/></svg></div>
-        <h4>Control de iluminación y clima</h4>
-        <p>Automatización de ambientes mediante sensores, horarios o control por voz (Alexa, Google Home).</p>
-      </div>
-      <div class="card" data-anim="fade">
-        <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></div>
-        <h4>Escenarios inteligentes</h4>
-        <p>Integración de sistemas que ajustan iluminación, sonido y temperatura según hábitos o necesidades.</p>
-      </div>
-      <div class="card" data-anim="fade">
-        <div class="icono"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg></div>
-        <h4>Integración IoT</h4>
-        <p>Soluciones conectadas para hogares y empresas: enchufes inteligentes, cámaras, cerraduras y más.</p>
-      </div>
-    </div>
-
-    <!-- SOPORTE -->
-    <h3 style="margin-top:40px;color:#a88934;" data-anim="fade">Soporte y Consultoría</h3>
-    <div class="grid cols-3">
-      <div class="card" data-anim="fade">
-        <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/></svg></div>
-        <h4>Soporte técnico remoto y en sitio</h4>
-        <p>Diagnóstico, mantenimiento y resolución de incidencias en redes e infraestructura existente.</p>
-      </div>
-      <div class="card" data-anim="fade">
-        <div class="icono"><svg viewBox="0 0 24 24"><path d="M4 4h16v4H4zm0 8h16v8H4z"/></svg></div>
-        <h4>Seguridad y respaldo</h4>
-        <p>Actualización de firmware, auditoría de seguridad y configuración de respaldos automáticos de equipos.</p>
-      </div>
-      <div class="card" data-anim="fade">
-        <div class="icono"><svg viewBox="0 0 24 24"><path d="M12 2l8 8H4z"/></svg></div>
-        <h4>Consultoría en diseño de red</h4>
-        <p>Asesoría experta en planeamiento, dimensionamiento e implementación de soluciones de conectividad.</p>
-      </div>
-    </div>
-
-    <!-- CTA -->
-    <div style="text-align:center;margin-top:40px;" data-anim="fade">
-      <a class="btn primary" href="https://wa.me/50672903518?text=Hola%20ANTAREX,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank">Solicitar cotización</a>
-    </div>
-  </div>
-
-  <script>
-    // Animación al hacer scroll
-    const observador = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){e.target.classList.add('visible');}
-      });
-    },{threshold:0.1});
-    document.querySelectorAll('[data-anim]').forEach(el=>observador.observe(el));
-  </script>
-</section>
-
-
-  <!-- WHY US -->
+  <!-- ¿POR QUÉ ELEGIRNOS? -->
   <section id="por-que" class="why">
     <div class="container">
       <span class="pill" data-anim="fade">¿Por qué elegir ANTAREX?</span>
@@ -282,10 +308,10 @@
       <h2 class="title" data-anim="fade">Certificaciones que respaldan nuestra excelencia</h2>
       <p class="sub" data-anim="fade">Nuestro equipo cuenta con certificaciones internacionales que garantizan la calidad, seguridad y eficiencia de cada proyecto.</p>
       <div class="grid cols-3">
-        <div class="card" data-anim="fade"><img src="logo_cisco.png" class="cert-logo"><h3>Certificaciones Cisco</h3><p>CCNP Core Networking, DevNet Associate, CCNA, ENCOR, ISE y Networking Technologies.</p></div>
-        <div class="card" data-anim="fade"><img src="logo_aws.png" class="cert-logo"><h3>Certificaciones Cloud</h3><p>AWS Academy Graduate – Cloud Architecting y Microsoft Azure Fundamentals.</p></div>
-        <div class="card" data-anim="fade"><img src="logo_fortinet.png" class="cert-logo"><h3>Seguridad y Gestión</h3><p>Introduction to the Threat Landscape (Fortinet) e ITIL v4 (PeopleCert).</p></div>
-        <div class="card" data-anim="fade"><img src="logo_github.png" class="cert-logo"><h3>Desarrollo y Automatización</h3><p>GitHub Foundations y Scrum Foundation Professional Certificate.</p></div>
+        <div class="card" data-anim="fade"><img src="logo_cisco.png" class="cert-logo" alt="Cisco" loading="lazy"><h3>Certificaciones Cisco</h3><p>CCNP Core Networking, DevNet Associate, CCNA, ENCOR, ISE y Networking Technologies.</p></div>
+        <div class="card" data-anim="fade"><img src="logo_aws.png" class="cert-logo" alt="AWS" loading="lazy"><h3>Certificaciones Cloud</h3><p>AWS Academy Graduate – Cloud Architecting y Microsoft Azure Fundamentals.</p></div>
+        <div class="card" data-anim="fade"><img src="logo_fortinet.png" class="cert-logo" alt="Fortinet" loading="lazy"><h3>Seguridad y Gestión</h3><p>Introduction to the Threat Landscape (Fortinet) e ITIL v4 (PeopleCert).</p></div>
+        <div class="card" data-anim="fade"><img src="logo_github.png" class="cert-logo" alt="GitHub" loading="lazy"><h3>Desarrollo y Automatización</h3><p>GitHub Foundations y Scrum Foundation Professional Certificate.</p></div>
       </div>
     </div>
   </section>
@@ -294,20 +320,42 @@
   <section class="cta-strip" data-anim="fade">
     <div class="container wrap">
       <h3 style="margin:0">¿Listo para modernizar tu red o tu hogar inteligente?</h3>
-      <a class="btn" href="https://wa.me/50672903518" target="_blank">Contáctanos por WhatsApp</a>
+      <a class="btn" href="https://wa.me/50672903518" target="_blank" rel="noopener">Contáctanos por WhatsApp</a>
     </div>
   </section>
 
-  <!-- CONTACTO -->
+  <!-- CONTACTO (tarjetas) -->
   <section id="contacto">
     <div class="container">
       <h2 class="title" data-anim="fade">Contacto</h2>
       <p class="sub" data-anim="fade">Cuéntanos tu proyecto y te asesoramos sin costo.</p>
       <div class="grid cols-3">
-        <div class="card" data-anim="fade"><strong>WhatsApp</strong><p>+506 7290-3518</p></div>
-        <div class="card" data-anim="fade"><strong>Correo</strong><p>jarguedasj1989@gmail.com</p></div>
+        <div class="card" data-anim="fade"><strong>WhatsApp</strong><p><a href="https://wa.me/50672903518" target="_blank" rel="noopener">+506 7290-3518</a></p></div>
+        <div class="card" data-anim="fade"><strong>Correo</strong><p><a href="mailto:Antarex.costarica@outlook.com">Antarex.costarica@outlook.com</a></p></div>
         <div class="card" data-anim="fade"><strong>Ubicación</strong><p>Costa Rica</p></div>
       </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO (debajo de Contacto) -->
+  <section id="formulario" style="background:#fbfcfe;border-top:1px solid rgba(0,0,0,.05);">
+    <div class="container">
+      <h2 class="title" data-anim="fade">Envíanos un mensaje</h2>
+      <p class="sub" data-anim="fade">Te responderemos a la brevedad. También puedes escribirnos por WhatsApp.</p>
+
+      <form action="https://formsubmit.co/Antarex.costarica@outlook.com" method="POST" class="contact-form" data-anim="fade">
+        <!-- Opcionales de FormSubmit -->
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde ANTAREX" />
+        <input type="hidden" name="_captcha" value="false" />
+        <!-- Reemplaza por tu URL final para redirigir a una página de gracias -->
+        <input type="hidden" name="_next" value="https://jorgearguedas.github.io/antarex" />
+
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="correo" placeholder="Tu correo" required />
+        <input type="text" name="telefono" placeholder="Teléfono (opcional)" />
+        <textarea name="mensaje" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+        <button type="submit" class="btn primary">Enviar mensaje</button>
+      </form>
     </div>
   </section>
 
@@ -317,13 +365,16 @@
   </footer>
 
   <!-- BOTÓN FLOTANTE -->
-  <a href="https://wa.me/50672903518" target="_blank" class="whatsapp-float">💬</a>
+  <a href="https://wa.me/50672903518" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">💬</a>
 
   <script>
+    // Año dinámico
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Animaciones globales
     const observer = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{
-        if(e.isIntersecting){e.target.classList.add('visible');}
+        if(e.isIntersecting){ e.target.classList.add('visible'); }
       });
     },{threshold:0.1});
     document.querySelectorAll('[data-anim]').forEach(el=>observer.observe(el));
